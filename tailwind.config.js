@@ -13,11 +13,14 @@ export default {
   			sm: 'calc(var(--radius) - 4px)'
   		},
   		colors: {
-  			background: 'hsl(var(--background))',
+
+
+
+  			background: '#ADCCED',
   			foreground: 'hsl(var(--foreground))',
   			card: {
-  				DEFAULT: 'hsl(var(--card))',
-  				foreground: 'hsl(var(--card-foreground))'
+  				DEFAULT: '#546373',
+  				foreground: '#ADCCED'
   			},
   			popover: {
   				DEFAULT: 'hsl(var(--popover))',

@@ -3,10 +3,11 @@ import registerImage from '../../assets/signup.png';
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
+import axios from "axios";
+import SummaryApi, { baseUrl } from "../../common/SummaryApi";
 
-
-// Define validation schema using Yup
 const schema = yup.object().shape({
+  userType: yup.string().required("User type is required"),
   name: yup.string().required("Name is required"),
   email: yup.string().email("Enter a valid email").required("Email is required"),
   password: yup.string().min(6, "Password must be at least 6 characters").required("Password is required"),
@@ -16,14 +17,35 @@ function RegisterForm() {
   const {
     register,
     handleSubmit,
+    setError,
     formState: { errors }
   } = useForm({
     resolver: yupResolver(schema),
   });
 
-  const onSubmit = (data) => {
-    console.log("Form Data:", data);
-    // You can call your API here
+  const onSubmit = async (data) => {
+    console.log("Form data:", data);
+    try {
+      const response = await axios({
+        method: SummaryApi.register.method,
+        url: `${baseUrl}${SummaryApi.register.url}`,
+        data,
+      });
+      console.log("Registration successful:", response.data);
+    } catch (error) {
+      if (error.response && error.response.data) {
+        const { errors: backendErrors } = error.response.data;
+        if (backendErrors) {
+          Object.keys(backendErrors).forEach((field) => {
+            setError(field, { type: "server", message: backendErrors[field] });
+          });
+        } else {
+          console.error("Unexpected error:", error.response.data);
+        }
+      } else {
+        console.error("Network or server error:", error);
+      }
+    }
   };
 
   return (
@@ -33,13 +55,32 @@ function RegisterForm() {
           <form onSubmit={handleSubmit(onSubmit)} className="p-6 md:p-8 flex flex-col gap-6">
             <div className="text-center">
               <h1 className="text-2xl font-bold">Create an account</h1>
-              <p className="text-gray-500">Sign up to start using Acme Inc</p>
+              <p className="text-gray-500">Sign up to start using Acc & Bill soft.</p>
+            </div>
+
+            {/* User Type Dropdown */}
+            <div className="flex flex-col gap-1">
+              <label htmlFor="userType" className="text-sm font-medium">
+                User Type
+              </label>
+              <select
+                {...register("userType")}
+                id="userType"
+                className="rounded-md border px-3 py-2 text-sm shadow-sm focus:border-blue-500 focus:outline-none"
+              >
+                <option value="">Select User Type</option>
+                <option value="Admin">Admin</option>
+                <option value="Accountant">Accountant</option>
+                <option value="Manager">Manager</option>
+                <option value="Client">Client</option>
+              </select>
+              {errors.userType && <p className="text-red-500 text-sm">{errors.userType.message}</p>}
             </div>
 
             {/* Name Field */}
             <div className="flex flex-col gap-1">
               <label htmlFor="name" className="text-sm font-medium">
-                Name
+                User Name
               </label>
               <input
                 {...register("name")}

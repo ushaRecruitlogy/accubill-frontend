@@ -1,3 +1,4 @@
+// import Test from "@/pages/Test";
 import React from "react";
 
 const Footer = () => {
@@ -12,7 +13,7 @@ const Footer = () => {
             to meet the needs of users across the globe.
           </p>
         </div>
-
+          {/* <Test/> */}
         {/* Quick Links */}
         <div>
           <h3 className="text-xl font-semibold text-white mb-3">Quick Links</h3>

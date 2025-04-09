@@ -9,7 +9,7 @@ const Hero = () => {
   return (
     <section className="pt-28 pb-16 bg-gradient-to-br from-blue-50 to-white">
       <div className="container mx-auto px-6">
-        <div className="bg-red-400 border border-blue-200 rounded-2xl shadow-md p-6 md:p-10 flex flex-col md:flex-row items-center gap-10">
+        <div className="bg-card  border border-blue-200 rounded-2xl shadow-md p-6 md:p-10 flex flex-col md:flex-row items-center gap-10">
           {/* Left: Animated Image */}
           <motion.div
             className="w-full md:w-1/2"
