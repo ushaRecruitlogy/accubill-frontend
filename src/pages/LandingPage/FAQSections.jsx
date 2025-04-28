@@ -78,7 +78,9 @@ const FAQSection = () => {
               <span className="text-xl">{openIndex === index ? <IoChevronDown className='text-red-500'/> : <IoChevronUp className='text-blue-500' />}</span>
             </div>
             {openIndex === index && (
-              <div className="mt-3 p-3 rounded bg-red-100 text-gray-800">
+              <div className="mt-3 p-3 rounded bg-red-100 text-gray-600 "
+              style={{ fontWeight: 400 }}
+              >
                 {item.answer}
               </div>
             )}

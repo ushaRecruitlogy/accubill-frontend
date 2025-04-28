@@ -45,8 +45,8 @@ const GSTBenefit = () => {
               key={index}
               className={`flex items-center gap-3 p-4 rounded-lg cursor-pointer shadow-sm transition ${
                 activeIndex === index
-                  ? 'bg-blue-50 text-blue-600 font-semibold'
-                  : 'bg-red-50 text-red-500 hover:bg-blue-50'
+                  ? 'bg-blue-50 text-[var(--bs-blue)] font-semibold'
+                  : 'bg-red-50 text-[var(--bs-red)] hover:bg-blue-50'
               }`}
               onClick={() => setActiveIndex(index)}
             >

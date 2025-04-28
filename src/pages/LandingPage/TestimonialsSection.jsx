@@ -56,10 +56,10 @@ const TestimonialsSection = () => {
                   className="w-full h-full object-cover rounded-tr-[3rem] border-1 border-gray-200 shadow-lg z-20"
                 />
                 {/* Bottom border (half width) */}
-                <div className="absolute bottom-0 left-0 w-1/2 h-[15px] bg-red-400 z-10"></div>
+                <div className="absolute bottom-0 left-0 w-1/2 h-[15px] bg-[var(--bs-red)] z-10"></div>
 
                 {/* Left border (half height) */}
-                <div className="absolute bottom-0 left-0 h-4/7 w-[15px] bg-red-400 z-10"></div>
+                <div className="absolute bottom-0 left-0 h-4/7 w-[15px] bg-[var(--bs-red)] z-10"></div>
               </div>
             </div>
             <div className="absolute inset-0 bg-white/5  group-hover:bg-black/5 transition-all duration-500 z-0"></div>

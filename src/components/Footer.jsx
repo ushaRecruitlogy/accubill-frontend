@@ -3,20 +3,22 @@ import { Link } from "react-router-dom";
 import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa";
 import { FaLocationArrow } from "react-icons/fa";
 import footerImage from "../assets/images//footer-dec.png";
+import Logo from "./Logo/Logo";
 
 const Footer = () => {
   return (
     <>
       <footer
-        className="px-6 bg-cover bg-center md:px-16 lg:px-24 xl:px-32 pt-8 mt-15 w-full text-gray-700 "
+        className="px-6 bg-cover bg-center md:px-16 lg:px-24 xl:px-32 pt-8 mt-50 w-full text-gray-700 "
         style={{ backgroundImage: `url(${footerImage})` }}
       >
         <div className="flex flex-col md:flex-row justify-between w-full gap-10 border-b border-gray-500/30 pb-6">
           {/* Branding & About */}
           <div className="md:max-w-96">
-            <Link to="/" style={{ fontSize: "1.5rem", fontWeight: "bold" }}>
-              <span className="text-[var(--bs-blue)]">ACCU</span>
-              <span className="text-[var(--bs-red)]">BILL</span>
+            <Link to="/">
+              <Logo />
+              {/* <span className="text-[var(--bs-blue)]">ACCU</span>
+              <span className="text-[var(--bs-red)]">BILL</span> */}
             </Link>
 
             <p className="mt-6 text-sm text-gray-400">accubill@gmail.com</p>
@@ -51,7 +53,7 @@ const Footer = () => {
           </div>
 
           {/* Links */}
-          <div className="flex-1 flex items-start md:justify-end gap-20 flex-wrap">
+          <div className="flex-1 flex items-start md:justify-end gap-5 flex-wrap">
             {/* Services */}
             <div>
               <h2 className="font-semibold mb-5">Services</h2>
@@ -91,29 +93,29 @@ const Footer = () => {
             </div>
             {/* Subscribe to our Newsletters */}
 
-            <div>
-              <h3 className="text-center font-semibold text-lg mb-3">
+            <div className="min-w-[220px] max-w-xs">
+              <h3 className="font-semibold text-lg mb-3">
                 Subscribe to our Newsletters
               </h3>
-              <p className="text-sm text-center mb-4 text-gray-400">
+              <p className="text-sm mb-4 text-gray-400">
                 Get our latest news and ideas to your inbox
               </p>
 
-              {/* Email input and send button */}
-              <form className="flex justify-center text-white items-center gap-2 flex-wrap">
+              {/* Responsive Form */}
+              <form className="flex flex-col sm:flex-row items-center justify-center gap-3 text-white">
                 <input
                   type="email"
                   placeholder="Your Email"
-                  className="border border-gray-300 
-      bg-blue-400 rounded-full px-4 py-2 w-72 
-      text-white placeholder-white 
-      focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="w-50 sm:w-56 border border-gray-300 
+                              bg-blue-400 rounded-full px-3 py-1.5 
+                              text-sm text-white placeholder-white 
+                              focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />
                 <button
                   type="submit"
                   className="bg-blue-500 text-white p-3 rounded-full hover:bg-blue-400 transition"
                 >
-                  <FaLocationArrow size={16} className="text-white" />
+                  <FaLocationArrow size={16} />
                 </button>
               </form>
             </div>

@@ -106,73 +106,66 @@ const ProductModel = () => {
   const [activeCategory, setActiveCategory] = useState("Sales");
 
   return (
-    <div className="fixed top-0 left-0 w-full h-[80vh] bg-white shadow-lg z-50 overflow-hidden">
-      {/* Internal Sub-header */}
-      <header className="w-full px-8 py-3 border-b border-gray-200 bg-gray-100/40 shadow-sm">
-        <div className="text-base text-gray-500 tracking-wide space-x-4 font-medium">
-          <span className="hover:text-blue-600 cursor-pointer transition">
-            AppsSuite
-          </span>
-
-          <span className="hover:text-blue-600 cursor-pointer transition">
-            Zoho One
-          </span>
-
-          <span className="hover:text-blue-600 cursor-pointer transition">
-            Marketplace
-          </span>
-
-          <span className="text-blue-600 font-semibold cursor-pointer transition">
-            EXPLORE ALL PRODUCTS
-          </span>
-        </div>
-      </header>
-
-      {/* Content Section */}
-      <div className="flex h-[calc(100%-56px)]">
-        {/* Sidebar */}
-        <aside className="w-72 border-r border-gray-200 bg-white overflow-y-auto p-4">
-          <input
-            type="text"
-            placeholder="I'm looking for..."
-            className="w-full mb-4 px-3 py-2 border rounded outline-none focus:ring-2 focus:ring-blue-500"
-          />
-          <ul className="space-y-2">
-            {sidebarItems.map((item) => (
-              <li
-                key={item}
-                className={`cursor-pointer p-2 rounded hover:bg-gray-100 hover:text-red-400 font-medium ${
-                  activeCategory === item ? "text-red-400" : ""
-                }`}
-                onClick={() => setActiveCategory(item)}
-              >
-                {item}
-              </li>
-            ))}
-          </ul>
-        </aside>
-
-        {/* Main Content */}
-        <main className="flex-1 p-6  bg-gray-100 overflow-y-auto">
-          {contentData[activeCategory] ? (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {contentData[activeCategory].map((app, index) => (
-                <div key={index} className="bg-white  hover:bg-gray-50 hover:shadow-lg  p-4 shadow rounded-2xl">
-                  <h3 className="text-lg font-semibold  text-gray-800 hover:text-blue-400">
-                    {app.title}
-                  </h3>
-                  <p className="text-sm hover:text-blue-400 text-gray-600 mt-1">{app.desc}</p>
-                </div>
-              ))}
-            </div>
-          ) : (
-            <p className="text-gray-600">
-              No data available for this category.
-            </p>
-          )}
-        </main>
-      </div>
+    <div className="fixed inset-0 bg-white z-50 overflow-auto">
+  {/* Header */}
+  <header className="w-full px-4 py-3 border-b border-gray-200 bg-gray-100 shadow-sm">
+    <div className="text-sm md:text-base text-gray-600 tracking-wide space-x-4 font-medium flex flex-wrap justify-start gap-4">
+      <span className="hover:text-blue-600 cursor-pointer">AppsSuite</span>
+      <span className="hover:text-blue-600 cursor-pointer">Zoho One</span>
+      <span className="hover:text-blue-600 cursor-pointer">Marketplace</span>
+      <span className="text-blue-600 font-semibold cursor-pointer">EXPLORE ALL PRODUCTS</span>
     </div>
+  </header>
+
+  {/* Responsive Container */}
+  <div className="flex flex-col md:flex-row min-h-screen">
+    {/* Sidebar */}
+    <aside className="w-full md:w-72 border-r border-gray-200 bg-white overflow-y-auto p-4 max-h-[40vh] md:max-h-full">
+      <input
+        type="text"
+        placeholder="I'm looking for..."
+        className="w-full mb-4 px-3 py-2 border rounded outline-none focus:ring-2 focus:ring-blue-500"
+      />
+      <ul className="space-y-2">
+        {sidebarItems.map((item) => (
+          <li
+            key={item}
+            className={`cursor-pointer p-2 rounded hover:bg-gray-100 hover:text-red-400 font-medium ${
+              activeCategory === item ? "text-red-400" : ""
+            }`}
+            onClick={() => setActiveCategory(item)}
+          >
+            {item}
+          </li>
+        ))}
+      </ul>
+    </aside>
+
+    {/* Main Content */}
+    <main className="flex-1 p-4 bg-gray-100 overflow-y-auto">
+      {contentData[activeCategory] ? (
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          {contentData[activeCategory].map((app, index) => (
+            <div
+              key={index}
+              className="bg-white hover:bg-gray-50 hover:shadow-lg p-4 shadow rounded-2xl"
+            >
+              <h3 className="text-lg font-semibold text-gray-800 hover:text-blue-400">
+                {app.title}
+              </h3>
+              <p className="text-sm text-gray-600 mt-1 hover:text-blue-400">
+                {app.desc}
+              </p>
+            </div>
+          ))}
+        </div>
+      ) : (
+        <p className="text-gray-600">No data available for this category.</p>
+      )}
+    </main>
+  </div>
+</div>
+
   );
 };
 

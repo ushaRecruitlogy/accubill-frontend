@@ -64,9 +64,9 @@ const PricingSection = () => {
                 {plan.title}
               </p>
 
-              <h1 className="text-3xl mr-25 md:text-4xl text-red-400 font-semibold">
+              <h1 className="text-3xl mr-25 md:text-4xl text-[var(--bs-red)] font-semibold">
                 ${plan.price}
-                <span className="text-sm font-normal text-red-400">/month</span>
+                <span className="text-sm font-normal text-[var(--bs-red)]">/month</span>
               </h1>
             </div>
 
