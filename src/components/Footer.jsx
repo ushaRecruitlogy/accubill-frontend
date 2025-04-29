@@ -9,7 +9,7 @@ const Footer = () => {
   return (
     <>
       <footer
-        className="px-6 bg-cover bg-center md:px-16 lg:px-24 xl:px-32 pt-8 mt-50 w-full text-gray-700 "
+        className="px-6  bg-cover bg-center md:px-16 lg:px-24 xl:px-32 pt-8 mt-50 w-full text-gray-00 "
         style={{ backgroundImage: `url(${footerImage})` }}
       >
         <div className="flex flex-col md:flex-row justify-between w-full gap-10 border-b border-gray-500/30 pb-6">
@@ -17,8 +17,6 @@ const Footer = () => {
           <div className="md:max-w-96">
             <Link to="/">
               <Logo />
-              {/* <span className="text-[var(--bs-blue)]">ACCU</span>
-              <span className="text-[var(--bs-red)]">BILL</span> */}
             </Link>
 
             <p className="mt-6 text-sm text-gray-400">accubill@gmail.com</p>
