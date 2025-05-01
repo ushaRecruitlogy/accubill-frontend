@@ -2,16 +2,41 @@ import React from 'react';
 import UploadImageBox from './UploadImageBox';
 
 const CreateAccount = () => {
+
+  <style>
+  {`
+    .w-full{
+     size: 70%;
+    }
+  `}
+</style>
   return (
+    
     <div className="min-h-screen bg-gray-50 p-8">
-             <style>
+       <style>
         {`
-          .w-full{
-           size: 70%;
-          }
+          .custom-w-full .w-full {
+            width: 70%;
+            font-size: 14px;
+            font-weight: 300;
+            line-height: 24px;  
+            color: #000000;
+          },
+          .custom-w-full .text-gray-700 {
+           font-weight: 300;
+        }
+           
+        .text-gray-500 {
+    font-weight: 630 !important;
+    color: oklch(0.35 0 0);
+}
+        
         `}
       </style>
-      <h1 className="text-2xl font-bold mb-6">Create Account</h1>
+
+      <div className="custom-w-full">
+       
+      <h1 className="text-1xl text-gray-500 mb-6">Create Account</h1>
 
       {/* Account Image */}
       <div className="mb-10">
@@ -20,7 +45,7 @@ const CreateAccount = () => {
 
       {/* Account Information */}
       <div className="bg-white p-6 rounded-md shadow-md mb-8">
-        <h2 className="text-1xl font-semibold mb-4">Account Information</h2>
+        <h2 className="text-1xl text-gray-500 mb-4">Account Information</h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {/* Left Side */}
@@ -129,9 +154,9 @@ const CreateAccount = () => {
 
       {/* Address Information */}
       <div className="bg-white p-6 rounded-md shadow-md mb-8">
-        <h2 className="text-2xl font-semibold mb-4">Address Information</h2>
+        <h2 className="text-1xl text-gray-500 mb-4">Address Information</h2>
 
-        <div className="flex justify-end mb-4">
+        <div className="flex justify-end mb-2">
           <button className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Copy Address</button>
         </div>
 
@@ -188,8 +213,9 @@ const CreateAccount = () => {
 
       {/* Description */}
       <div className="bg-white p-6 rounded-md shadow-md">
-        <h2 className="text-xl font-semibold mb-4">Description Information</h2>
+        <h2 className="text-xl text-gray-500 mb-4">Description Information</h2>
         <textarea className="w-150 h-15 border border-gray-300 rounded p-2"></textarea>
+      </div>
       </div>
     </div>
   );

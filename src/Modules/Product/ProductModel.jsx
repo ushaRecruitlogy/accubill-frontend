@@ -277,9 +277,9 @@ const ProductModel = () => {
   return (
     <div className="fixed top-0 left-0 w-full h-[80vh] bg-white shadow-lg z-50 overflow-hidden">
       {/* Internal Sub-header */}
-      <header className="w-full px-8 py-3 border-b border-gray-200 bg-gray-100/40 shadow-sm">
+      <header className="w-full px-8 py-2 mt-2 border-b border-gray-200 bg-gray-100/40 shadow-sm">
         <div className="text-base text-gray-500 tracking-wide space-x-4 font-medium">
-          <span className="hover:text-blue-600 cursor-pointer transition">
+          <span className="hover:text-blue-600 mt-2 cursor-pointer transition">
             Apps
           </span>
 

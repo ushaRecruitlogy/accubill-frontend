@@ -1,0 +1,31 @@
+
+
+
+.my_heading{
+        font-size: medium;
+        font-weight: 600;
+        color: #716b6b;
+}
+.subheading{
+        font-size: medium;
+        font-weight: 600;
+        color: #f01616;
+}
+.title{
+        font-size: large;
+        font-weight: 600;
+        color: #716b6b;
+}
+.bg-gray-100{
+    background-color: #ecb6b6;
+}
+.itms{
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: #716b6b;
+    padding: 0.5rem;
+}
+
+
+
+/* oklch(0.69 0.23 23.63);  */

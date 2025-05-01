@@ -9,11 +9,12 @@ const Footer = () => {
   return (
     <>
       <footer
-        className="px-6  bg-cover bg-center md:px-16 lg:px-24 xl:px-32 pt-8 mt-50 w-full text-gray-00 "
-        style={{ backgroundImage: `url(${footerImage})` }}
+        className="px-6  bg-cover bg-center md:px-8 lg:px-12 xl:px-6 pt-8 mt-50 w-full text-gray-00 "
+      // className="relative  bg-cover bg-center flex bg-white px-6 py-3 mt-50 md:px-10 md:py-5 overflow-hidden"
+        style={{ backgroundImage: `url(${footerImage})`,}}
       >
         <div className="flex flex-col md:flex-row justify-between w-full gap-10 border-b border-gray-500/30 pb-6">
-          {/* Branding & About */}
+          {/*Logo*/}
           <div className="md:max-w-96">
             <Link to="/">
               <Logo />

@@ -46,11 +46,24 @@ function Login() {
     setEmail("");
   };
 
-  const handleAddEmailLink=()=>{
-    toast.success("link sent to your email. Please verify to login");
-    setShowModal(false)
 
-  }
+  const handleAddEmailLink = () => {
+    if (email === "admin@gmail.com") {
+      toast.success("Your account is already  activated. You can login to access resources.");
+      setEmail("");
+      setShowModal(false);
+
+    } else if (email === "admin1@gmail.com") {
+      toast.success("Activation link send. Please check your email to activate your account.");
+      setEmail("");
+      setShowModal(false);
+
+    }
+    else{
+      toast.error("Email not found or not eligible for activation.");
+    }
+  };
+  
 
   const onSubmit = (data) => {
     console.log("Login Data:", data);
@@ -65,7 +78,14 @@ function Login() {
       toast.success("OTP sent to your email. Please verify to login");
       handleAddEmail();
       console.log("Login successful!");
-    } else {
+    } else if(data.email === "admin1@gmail.com" && data.password === "admin123"){
+      toast.info("Your account is not activated please activate first.");
+      // setShowOtpModal(true);
+      // setShowModal(false);
+      // navigate("/profilepage", { replace: true });
+
+    }
+    else {
       toast.error("Invalid email or password.");
       console.log("Invalid email or password.");
     }

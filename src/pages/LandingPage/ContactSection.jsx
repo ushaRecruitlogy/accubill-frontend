@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import contactBg from "../../assets/images/contact-bg.png";
 
 import { IoCall } from "react-icons/io5";
+import { toast } from "react-toastify";
 
 const ContactSection = () => {
   const [formData, setFormData] = useState({
@@ -21,7 +22,7 @@ const ContactSection = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Form submitted:", formData);
-    alert("Thanks for contacting us!");
+    toast.success("Thanks for contacting us!");
     setFormData({
       name: "",
       email: "",
