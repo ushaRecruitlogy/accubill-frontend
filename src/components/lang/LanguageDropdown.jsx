@@ -65,7 +65,7 @@ export default function LanguageDropdown() {
                 <span>{lang.name}</span>
               </div>
               {language === lang.code && (
-                <Check className="w-4 h-4 text-blue-600" />
+                <Check className="w-4 h-4 text-[var(--color-blue)]" />
               )}
             </li>
           ))}

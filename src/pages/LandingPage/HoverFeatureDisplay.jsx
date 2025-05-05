@@ -47,8 +47,8 @@ const HoverFeatureDisplay = () => {
       {/* 🟡 Section Heading */}
       <h1 className="text-3xl sm:text-4xl font-bold text-gray-500 text-center mb-20">
         See What Our Agency{" "}
-        <span className="text-[var(--bs-blue)]">Offers </span>
-        <br /> & What We <span className="text-[var(--bs-red)]">Provide</span>
+        <span className="text-[var(--color-blue)]">Offers </span>
+        <br /> & What We <span className="text-[var(--color-red)]">Provide</span>
       </h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl w-full ">
         {cards.map((card, index) => (
@@ -75,7 +75,7 @@ const HoverFeatureDisplay = () => {
                 <div
                   className="absolute bottom-[-17px] left-1/2 transform -translate-x-1/2 w-0 h-0 
                               border-l-[20px] border-r-[20px] border-t-[20px] 
-                              border-l-transparent border-r-transparent border-t-red-400"
+                              border-l-transparent border-r-transparent border-t-[var(--color-red)]"
                 ></div>
               </div>
             </div>

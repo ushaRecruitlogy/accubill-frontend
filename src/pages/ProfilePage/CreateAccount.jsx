@@ -157,7 +157,7 @@ const CreateAccount = () => {
         <h2 className="text-1xl text-gray-500 mb-4">Address Information</h2>
 
         <div className="flex justify-end mb-2">
-          <button className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Copy Address</button>
+          <button className="bg-[var(--color-blue)] text-white px-4 py-2 rounded hover:bg-[var(--color-blue)]">Copy Address</button>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

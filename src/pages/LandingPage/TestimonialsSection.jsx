@@ -32,7 +32,7 @@ const testimonials = [
 const TestimonialsSection = () => {
   return (
     <div className="max-w-6xl mx-auto px-4 py-12">
-      <h2 className="text-3xl font-bold text-center mb-10">
+      <h2 className="text-3xl! font-bold! fontNavbar text-center! mb-10!">
         What Our Clients Say
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-2  lg:grid-cols-3 gap-8">
@@ -56,10 +56,10 @@ const TestimonialsSection = () => {
                   className="w-full h-full object-cover rounded-tr-[3rem] border-1 border-gray-200 shadow-lg z-20"
                 />
                 {/* Bottom border (half width) */}
-                <div className="absolute bottom-0 left-0 w-1/2 h-[15px] bg-[var(--bs-red)] z-10"></div>
+                <div className="absolute bottom-0 left-0 w-1/2 h-[15px] bg-[var(--color-red)] z-10"></div>
 
                 {/* Left border (half height) */}
-                <div className="absolute bottom-0 left-0 h-4/7 w-[15px] bg-[var(--bs-red)] z-10"></div>
+                <div className="absolute bottom-0 left-0 h-4/7 w-[15px] bg-[var(--color-red)] z-10"></div>
               </div>
             </div>
             <div className="absolute inset-0 bg-white/5  group-hover:bg-black/5 transition-all duration-500 z-0"></div>
@@ -68,7 +68,7 @@ const TestimonialsSection = () => {
             <div className="p-1  text-center">
               <p className="text-black italic">
                 <span className="text-4xl font-bold">"</span>
-                {item.message}
+               <span className="fontNavbar text-[15px]!">{item.message}</span> 
                 <br />
                 <span className="text-4xl font-bold">"</span>
               </p>

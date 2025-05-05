@@ -72,14 +72,14 @@ const MobileNumbers = () => {
             className="flex items-center justify-between bg-gray-100 p-4 rounded-md text-gray-700 shadow-sm mb-3"
           >
             <div className="flex items-center gap-3">
-              {/* <FaMobileRetro className="text-red-600 text-5xl" /> */}
+              <FaMobileRetro className="text-[var(--color-red)] text-4xl" />
               <div>
                 <p className="fontSize">{item.number}</p>
                 <p className="fontSize">{item.addedAt}</p>
               </div>
             </div>
             <FiTrash2
-              className="text-red-500 hover:text-red-600 cursor-pointer text-xl"
+              className="text-[var(--color-red)] hover:text-[var(--color-blue)] cursor-pointer text-xl"
               onClick={() => handleDelete(idx)}
             />
           </div>
@@ -116,7 +116,7 @@ const MobileNumbers = () => {
                 </button>
                 <button
                   onClick={handleSendOtp}
-                  className="bg-red-500 text-white px-4 py-2 rounded"
+                  className="bg-[var(--color-red)] text-white px-4 py-2 rounded"
                 >
                   Send OTP
                 </button>
@@ -150,7 +150,7 @@ const MobileNumbers = () => {
                 </button>
                 <button
                   onClick={handleVerifyOtp}
-                  className="bg-blue-600 text-white px-4 py-2 rounded"
+                  className="bg-[var(--color-blue)] text-white px-4 py-2 rounded"
                 >
                   Verify OTP
                 </button>

@@ -2,7 +2,7 @@
 import React from 'react';
 import CRMNavbar from './CRMNavbar';
 import { Outlet } from 'react-router-dom';
-// import './CRM.css'; 
+import './CRM.css'; 
 
 
 const CRMLayout = () => (

@@ -35,7 +35,7 @@ const GSTBenefit = () => {
     <div className="container mx-auto px-4 py-10">
       <h2 className="text-3xl font-bold text-center mb-10">
         
-        <p><FaPaperclip className='text-red-700 '/></p> Features of GST Billing and Accounting Software
+        <p><FaPaperclip className='text-[var(--color-red)] '/></p> Features of GST Billing and Accounting Software
       </h2>
       <div className="flex flex-col lg:flex-row gap-6">
         {/* Left Tabs */}
@@ -45,8 +45,8 @@ const GSTBenefit = () => {
               key={index}
               className={`flex items-center gap-3 p-4 rounded-lg cursor-pointer shadow-sm transition ${
                 activeIndex === index
-                  ? 'bg-blue-50 text-[var(--bs-blue)] font-semibold'
-                  : 'bg-red-50 text-[var(--bs-red)] hover:bg-blue-50'
+                  ? 'bg-blue-50 text-[var(--color-blue)] font-semibold'
+                  : 'bg-red-50 text-[var(--color-red)] hover:bg-blue-50'
               }`}
               onClick={() => setActiveIndex(index)}
             >

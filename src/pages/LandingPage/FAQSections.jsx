@@ -66,21 +66,21 @@ const FAQSection = () => {
       style={{ backgroundImage: `url(${bgImage})` }}
     >
       <div className="max-w-7xl mx-auto bg-white bg-opacity-30 rounded-lg p-6 shadow-md">
-        <h2 className="text-3xl font-bold text-center mb-8">Frequently Asked Questions</h2>
+        <h2 className="text-3xl! fontNavbar font-bold! text-center! mb-8!">Frequently Asked Questions</h2>
         {faqData.map((item, index) => (
           <div
             key={index}
             className="border border-gray-300 rounded-md mb-4 p-4 shadow cursor-pointer transition-all bg-white"
             onClick={() => toggleAnswer(index)}
           >
-            <div className="flex justify-between items-center text-lg font-medium">
+            <div className="flex justify-between items-center text-[14px]! fontNavbar">
               <span>{item.question}</span>
-              <span className="text-xl">{openIndex === index ? <IoChevronDown className='text-red-500'/> : <IoChevronUp className='text-blue-500' />}</span>
+              <span className="text-xl">{openIndex === index ? <IoChevronDown className='text-[var(--color-red)]'/> : <IoChevronUp className='text-[var(--color-blue)]' />}</span>
             </div>
             {openIndex === index && (
-              <div className="mt-3 p-3 rounded bg-red-100 text-gray-600 "
-              style={{ fontWeight: 400 }}
-              >
+              <div className="mt-3 p-3 rounded bg-[var(--color-red-light)] fontTopHeading text-[14px]!">
+          
+              
                 {item.answer}
               </div>
             )}

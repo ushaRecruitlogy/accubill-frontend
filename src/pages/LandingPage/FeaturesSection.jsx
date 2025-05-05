@@ -155,7 +155,7 @@ const TruckIcon = () => (
 const Card = ({ title, description, icon }) => (
   <div className="text-sm text-white w-full md:w-50 h-60 p-4 hover:shadow-xl duration-400">
     <div className="flex flex-col items-center justify-between">
-      <div className="bg-white p-3 rounded-full mb-3 text-[var(--bs-red)]">
+      <div className="bg-white p-3 rounded-full mb-3 text-[var(--color-red)]">
         {icon}
       </div>
       <h2 className="text-lg font-semibold text-center">{title}</h2>
@@ -335,8 +335,8 @@ const FeaturesSection = () => {
       <div>
         <h1 className="text-3xl sm:text-4xl font-bold text-gray-500 text-center">
           Simplify Your Workflow{" "}
-          <span className="text-[var(--bs-blue)]">with </span>
-          <br /> These <span className="text-[var(--bs-red)]"> Key Highlights</span>
+          <span className="text-[var(--color-blue)]">with </span>
+          <br /> These <span className="text-[var(--color-red)]"> Key Highlights</span>
         </h1>
         {/* <h1>
         Simplify Your Workflow with These Highlights

@@ -48,7 +48,7 @@ const ContactSection = () => {
           <div className="text-white text-xl">
             <p>You can also reach us directly, call us at</p>
             <div className="flex items-center gap-2 mt-2">
-              <span className="bg-white text-[var(--bs-red)] border border-[var(--bs-red)] rounded-full p-2">
+              <span className="bg-white text-[var(--color-red)] border border-[var(--color-red)] rounded-full p-2">
                 <IoCall className="w-5 h-5" />
               </span>
               <strong className="text-white text-xl">456-7890</strong>
@@ -110,7 +110,7 @@ const ContactSection = () => {
             <div className="flex justify-center">
               <button
                 type="submit"
-                className="cursor-pointer px-8 py-2 bg-[var(--bs-blue)] hover:bg-blue-700 transition text-white rounded-full shadow"
+                className="cursor-pointer px-8 py-2 bg-[var(--color-blue)] hover:bg-[var(--color-blue)] transition text-white rounded-full shadow"
               >
                 Send Message
               </button>

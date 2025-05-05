@@ -32,7 +32,7 @@ const DashboardLayout = () => {
         <header className="h-16 py-5 bg-white shadow flex items-center px-4 justify-between">
           <button
             onClick={() => setCollapsed(!collapsed)}
-            className="text-red-500 text-2xl"
+            className="text-[var(--color-red)] text-2xl"
           >
             {collapsed ? <LuSquareArrowRight /> : <RiArrowLeftBoxLine />}
           </button>
@@ -40,7 +40,7 @@ const DashboardLayout = () => {
           {/* User Profile */}
           <div className="flex items-center mr-10 space-x-4">
             <UserProfile
-              className="text-red-500 text-3xl"
+              className="text-[var(--color-red)] text-3xl"
               user={{
                 name: "Jane Doe",
                 id: "USR-00123",

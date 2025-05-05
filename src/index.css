@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 @import "tailwindcss";
 
-@tailwind base;
+/* @tailwind base;
 @tailwind components;
-@tailwind utilities;
+@tailwind utilities; */
 
 *{
 
@@ -14,41 +14,64 @@
   font-style: italic; 
 }
 
-.text-gray-700{
+@theme {
+  --color-red: #e42222;
+  --color-red-light: #fef2f2;
+  --color-blue: #60a5fa;
+  --color-blue-light: #60a5fa;
+}
+
+.fontHeading{
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 0.9rem;
+  /* line-height: 6rem; */
+  color:#525252;
+
+}
+.fontTopHeading{
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.8rem;
+  /* line-height: 6rem; */
+  color:#6b6a6a;
+
+}
+.profileDashFont{
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.8rem;
+  /* line-height: 6rem; */
+  color:#ffffff;
+}
+
+.fontNavbar{
+  font-family: "Roboto", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+  font-size: 1.1rem;
+  /* line-height: 6rem; */
+  color:#6e6e6e;
+}
+
+.colorPinkRed{
+  background: linear-gradient(to top, #ef4444, #ec4899);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+/* .text-gray-700{
   color: #555555;
   font-size: 0.8rem;
   font-weight: 400;
   
-}
+} */
 
 
-:root {
-  --bs-blue: #60a5fa;
-  --bs-indigo: #6610f2;
-  --bs-purple: #6f42c1;
-  --bs-pink: #d63384;
-  --bs-red: #ee0d0d;
-  /* --bs-red: #f87171; */
-  /* #DC143C */
-  --bs-redDark: #f03636;
-  --bs-orange: #fd7e14;
-  --bs-yellow: #ffc107;
-  --bs-green: #198754;
-  --bs-teal: #20c997;
-  --bs-cyan: #0dcaf0;
-  --bs-white: #fff;
-  --bs-gray: #6c757d;
-  --bs-gray-dark: #343a40;
-  --bs-primary: #0d6efd;
-  --bs-secondary: #6c757d;
-  --bs-success: #198754;
-  --bs-info: #0dcaf0;
-  --bs-warning: #ffc107;
-  --bs-danger: #dc3545;
-  --bs-light: #f8f9fa;
-  --bs-dark: #212529;
-  
-}
 .no-scrollbar::-webkit-scrollbar {
   display: none;
 }
@@ -113,5 +136,15 @@
 .clip-path-red-triangle {
   clip-path: polygon(0 0, 100% 0, 0 100%);
 }
+
+.scrollbar-hidden::-webkit-scrollbar {
+  display: none; /* for Chrome, Safari, and Opera */
+}
+
+.scrollbar-hidden {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+
 
 /* #fb5656; */

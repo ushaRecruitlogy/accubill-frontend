@@ -55,7 +55,7 @@ const UserProfile = ({ user }) => {
         className="cursor-pointer"
         onClick={() => setIsDropdownOpen(!isDropdownOpen)}
       >
-        <CgProfile className="text-3xl text-red-500" />
+        <CgProfile className="text-3xl text-[var(--color-red)]" />
       </div>
 
       {/* Dropdown */}
@@ -69,7 +69,7 @@ const UserProfile = ({ user }) => {
           </div>
           <div className="border-t border-gray-200">
             <button
-              className="w-full px-4 py-2 text-sm text-red-500 hover:bg-red-100 text-left"
+              className="w-full px-4 py-2 text-sm text-[var(--color-red)] hover:bg-red-100 text-left"
               onClick={handleLogout}
             >
               Logout

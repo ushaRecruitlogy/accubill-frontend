@@ -1,7 +1,7 @@
-import React from 'react';
-import bannerDecLeft from '../../assets/images/baner-dec-left.png';
-import bannerRightImage from '../../assets/images/banner-right-image.png';
-import bannerDecRight from '../../assets/images/baner-dec-right.png';
+import React from "react";
+import bannerDecLeft from "../../assets/images/baner-dec-left.png";
+import bannerRightImage from "../../assets/images/banner-right-image.png";
+import bannerDecRight from "../../assets/images/baner-dec-right.png";
 
 const HeroSection = () => {
   return (
@@ -22,16 +22,17 @@ const HeroSection = () => {
 
       {/* Main Content */}
       <div className="relative z-10 flex flex-col-reverse md:flex-row items-center justify-between gap-10 max-w-7xl mx-auto">
-        
         {/* Left Text Content */}
         <div className="w-full md:w-1/2 text-left animate-slide-in-left">
-          <p className="text-lg md:text-xl font-bold text-[var(--bs-red)] mb-4">
-            Welcome to our Accounting Solutions
-          </p>
+        <p className="text-lg md:text-xl font-bold mb-4 colorPinkRed">
+  Welcome to our Accounting Solutions
+</p>
 
           <h1 className="text-3xl md:text-6xl font-bold text-gray-600 leading-tight mb-6">
-            Accounting <span className="text-[var(--bs-red)]">solutions</span> are
-            streamlined for <span className="text-[var(--bs-blue)]">accuracy</span>
+            Accounting{" "}
+            <span className="text-[65px]! md:text-xl font-bold mb-4 colorPinkRed">solutions</span> are
+            streamlined for{" "}
+            <span className="text-[var(--color-blue)]">accuracy</span>
           </h1>
 
           <p className="text-base md:text-lg text-gray-500">

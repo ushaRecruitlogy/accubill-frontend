@@ -28,7 +28,7 @@ const Footer = () => {
                 href="https://facebook.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-blue-500 text-white p-2.5 rounded-full hover:bg-blue-600 transition"
+                className="bg-[var(--color-blue)] text-white p-2.5 rounded-full hover:bg-[var(--color-blue)] transition"
               >
                 <FaFacebookF size={16} />
               </a>
@@ -36,7 +36,7 @@ const Footer = () => {
                 href="https://twitter.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-blue-500 text-white p-2.5 rounded-full hover:bg-blue-600 transition"
+                className="bg-[var(--color-blue)] text-white p-2.5 rounded-full hover:bg-[var(--color-blue)] transition"
               >
                 <FaTwitter size={16} />
               </a>
@@ -44,7 +44,7 @@ const Footer = () => {
                 href="https://instagram.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-blue-500 text-white p-2.5 rounded-full hover:bg-blue-600 transition"
+                className="bg-[var(--color-blue)] text-white p-2.5 rounded-full hover:bg-[var(--color-blue)] transition"
               >
                 <FaInstagram size={16} />
               </a>
@@ -106,13 +106,13 @@ const Footer = () => {
                   type="email"
                   placeholder="Your Email"
                   className="w-50 sm:w-56 border border-gray-300 
-                              bg-blue-400 rounded-full px-3 py-1.5 
+                              bg-[var(--color-blue)] rounded-full px-3 py-1.5 
                               text-sm text-white placeholder-white 
-                              focus:outline-none focus:ring-2 focus:ring-blue-500"
+                              focus:outline-none focus:ring-2 focus:ring-[var(--color-blue)]"
                 />
                 <button
                   type="submit"
-                  className="bg-blue-500 text-white p-3 rounded-full hover:bg-blue-400 transition"
+                  className="bg-[var(--color-blue)] text-white p-3 rounded-full hover:bg-[var(--color-blue)] transition"
                 >
                   <FaLocationArrow size={16} />
                 </button>

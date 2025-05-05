@@ -13,25 +13,11 @@ const Sidebar = ({ collapsed }) => {
   return (
     <nav className="flex-1 px-2 py-10   ml-5 p-2   text-sm">
 
-<style>
-        {`
-        .fontSize{
-             color:rgb(243, 243, 243);
-             font-size: 0.8rem;
-            font-weight: 400;
-    }
-    
-    .headingFont{
-            font-size: 16px;
-            font-weight: 700;
-            line-height: 24px;  
-            color: #555555;
-    }`}
-      </style>
+
       {/* Profile Section */}
       <div>
         <div
-          className="cursor-pointer font-normal mt-5 mb-3  text-gray-300 hover:text-blue-500 transition"
+          className="cursor-pointer font-normal mt-5 mb-3  text-gray-300 hover:text-[var(--color-blue)] transition"
           onClick={() => setOpenMenu(openMenu === "profile" ? null : "profile")}
         >
           <div className="flex items-center justify-between pr-2">
@@ -59,8 +45,8 @@ const Sidebar = ({ collapsed }) => {
             className={({ isActive }) =>
               `block flex items-center space-x-2 px-2 mb-2 p-3  rounded transition ${
                 isActive
-                  ? "bg-blue-100 text-blue-600"
-                  : "text-gray-200 hover:text-white hover:bg-blue-500"
+                  ? "bg-blue-100 profileDashFont"
+                  : "text-gray-200 hover:text-white hover:bg-[var(--color-blue)]"
               }`
             }
           >
@@ -73,8 +59,8 @@ const Sidebar = ({ collapsed }) => {
             className={({ isActive }) =>
               `block flex items-center space-x-2 px-2 mb-2 p-3  rounded transition ${
                 isActive
-                  ? "bg-blue-100 text-blue-600"
-                  : "text-gray-200 hover:text-white hover:bg-blue-500"
+                  ? "bg-blue-100 text-[var(--color-blue)]"
+                  : "text-gray-200 hover:text-white hover:bg-[var(--color-blue)]"
               }`
             }
           >
@@ -87,8 +73,8 @@ const Sidebar = ({ collapsed }) => {
             className={({ isActive }) =>
               `block flex items-center space-x-2 px-2 mb-2 p-3  rounded transition ${
                 isActive
-                  ? "bg-blue-100 text-blue-600"
-                  :"text-gray-200 hover:text-white hover:bg-blue-500"
+                  ? "bg-blue-100 text-[var(--color-blue)]"
+                  :"text-gray-200 hover:text-white hover:bg-[var(--color-blue)]"
               }`
             }
           >
@@ -101,7 +87,7 @@ const Sidebar = ({ collapsed }) => {
       {/* Security Section */}
       <div>
         <div
-          className="cursor-pointer font-normal mt-5 mb-3 text-gray-300 hover:text-blue-500 transition"
+          className="cursor-pointer font-normal mt-5 mb-3 text-gray-300 hover:text-[var(--color-blue)] transition"
           onClick={() => setOpenMenu(openMenu === "Security" ? null : "Security")}
         >
           <div className="flex items-center justify-between pr-2">
@@ -129,8 +115,8 @@ const Sidebar = ({ collapsed }) => {
             className={({ isActive }) =>
               `block flex items-center space-x-2 px-2 mb-2 p-3  rounded transition ${
                 isActive
-                  ? "bg-blue-100 text-blue-600"
-                  : "text-gray-200 hover:text-white hover:bg-blue-500"
+                  ? "bg-blue-100 text-[var(--color-blue)]"
+                  : "text-gray-200 hover:text-white hover:bg-[var(--color-blue)]"
               }`
             }
           >
@@ -143,8 +129,8 @@ const Sidebar = ({ collapsed }) => {
             className={({ isActive }) =>
               `block flex items-center space-x-2 px-2 mb-2 p-3  rounded transition ${
                 isActive
-                  ? "bg-blue-100 text-blue-600"
-                  : "text-gray-200 hover:text-white hover:bg-blue-500"
+                  ? "bg-blue-100 text-[var(--color-blue)]"
+                  : "text-gray-200 hover:text-white hover:bg-[var(--color-blue)]"
               }`
             }
           >
@@ -157,8 +143,8 @@ const Sidebar = ({ collapsed }) => {
             className={({ isActive }) =>
               `block flex items-center space-x-2 px-2 mb-2 p-3  rounded transition ${
                 isActive
-                  ? "bg-blue-100 text-blue-600"
-                  : "text-gray-200 hover:text-white hover:bg-blue-500"
+                  ? "bg-blue-100 text-[var(--color-blue)]"
+                  : "text-gray-200 hover:text-white hover:bg-[var(--color-blue)]"
               }`
             }
           >
@@ -171,8 +157,8 @@ const Sidebar = ({ collapsed }) => {
             className={({ isActive }) =>
               `block flex items-center space-x-2 px-2 mb-2 p-3  rounded transition ${
                 isActive
-                  ? "bg-blue-100 text-blue-600"
-                  : "text-gray-200 hover:text-white hover:bg-blue-500"
+                  ? "bg-blue-100 text-[var(--color-blue)]"
+                  : "text-gray-200 hover:text-white hover:bg-[var(--color-blue)]"
               }`
             }
           >
@@ -185,8 +171,8 @@ const Sidebar = ({ collapsed }) => {
             className={({ isActive }) =>
               `block flex items-center space-x-2 px-2 mb-2 p-3  rounded transition ${
                 isActive
-                  ? "bg-blue-100 text-blue-600"
-                  : "text-gray-200 hover:text-white hover:bg-blue-500"
+                  ? "bg-blue-100 text-[var(--color-blue)]"
+                  : "text-gray-200 hover:text-white hover:bg-[var(--color-blue)]"
               }`
             }
           >
@@ -199,7 +185,7 @@ const Sidebar = ({ collapsed }) => {
       {/* Settings Section */}
       <div>
         <div
-          className="cursor-pointer font-normal mt-5 mb-3 text-gray-300 hover:text-blue-500 transition"
+          className="cursor-pointer font-normal mt-5 mb-3 text-gray-300 hover:text-[var(--color-blue)] transition"
           onClick={() => setOpenMenu(openMenu === "Settings" ? null : "Settings")}
         >
           <div className="flex items-center justify-between pr-2">
@@ -227,8 +213,8 @@ const Sidebar = ({ collapsed }) => {
             className={({ isActive }) =>
               `block flex items-center space-x-2 px-2 mb-2 p-3  rounded transition ${
                 isActive
-                  ? "bg-blue-100 text-blue-600"
-                  : "text-gray-200 hover:text-blue-500 hover:bg-blue-50"
+                  ? "bg-blue-100 text-[var(--color-blue)]"
+                  : "text-gray-200 hover:text-[var(--color-blue)] hover:bg-blue-50"
               }`
             }
           >
@@ -241,8 +227,8 @@ const Sidebar = ({ collapsed }) => {
             className={({ isActive }) =>
               `block flex items-center space-x-2 px-2 mb-2 p-3  rounded transition ${
                 isActive
-                  ? "bg-blue-100 text-blue-600"
-                  : "text-gray-200 hover:text-blue-500 hover:bg-blue-50"
+                  ? "bg-blue-100 text-[var(--color-blue)]"
+                  : "text-gray-200 hover:text-[var(--color-blue)] hover:bg-blue-50"
               }`
             }
           >
@@ -255,8 +241,8 @@ const Sidebar = ({ collapsed }) => {
             className={({ isActive }) =>
               `block flex items-center space-x-2 px-2 mb-2 p-3  rounded transition ${
                 isActive
-                  ? "bg-blue-100 text-blue-600"
-                  : "text-gray-200 hover:text-blue-500 hover:bg-blue-50"
+                  ? "bg-blue-100 text-[var(--color-blue)]"
+                  : "text-gray-200 hover:text-[var(--color-blue)] hover:bg-blue-50"
               }`
             }
           >
@@ -269,8 +255,8 @@ const Sidebar = ({ collapsed }) => {
             className={({ isActive }) =>
               `block flex items-center space-x-2 px-2 mb-2 p-3  rounded transition ${
                 isActive
-                  ? "bg-blue-100 text-blue-600"
-                  : "text-gray-200 hover:text-blue-500 hover:bg-blue-50"
+                  ? "bg-blue-100 text-[var(--color-blue)]"
+                  : "text-gray-200 hover:text-[var(--color-blue)] hover:bg-blue-50"
               }`
             }
           >

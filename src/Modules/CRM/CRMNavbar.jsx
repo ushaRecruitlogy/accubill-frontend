@@ -13,17 +13,17 @@ const CRMNavbar = () => {
   ];
 
   return (
-    <nav className="flex items-center px-6 py-3 border-b bg-white shadow-sm">
-      <div className="text-xl font-bold mr-10">CRM</div>
-      <ul className="flex items-center gap-6">
+    <nav className="flex items-center px-6 py-3 border-b bg-gray-600 text-white shadow-sm">
+      <div className="text-xl text-white font-bold mr-10">CRM</div>
+      <ul className="flex items-center  gap-6 ">
         {navItems.map((item) => (
           <li key={item.name}>
             <NavLink
               to={item.path}
               className={({ isActive }) =>
-                `pb-1 border-b-2 ${
-                  isActive ? 'border-blue-600 text-blue-600' : 'border-transparent text-gray-700'
-                } hover:text-blue-600`
+                `pb-1 border-b-2  ${
+                  isActive ? 'border-[var(--color-blue)] text-[var(--color-blue)]' : 'border-transparent text-white! fontHeading'
+                } hover:text-[var(--color-blue)]`
               }
             >
               {item.name}
@@ -33,7 +33,7 @@ const CRMNavbar = () => {
 
         {/* "More" Dropdown */}
         <li className="relative group">
-          <button className="text-gray-700 hover:text-blue-600">More ▾</button>
+          <button className="text-gray-700 hover:text-[var(--color-blue)]">More ▾</button>
           <div className="absolute hidden group-hover:block top-full left-0 bg-white shadow-md p-2 rounded w-40 z-10">
             <p className="hover:bg-gray-100 p-2 rounded cursor-pointer">Reports</p>
             <p className="hover:bg-gray-100 p-2 rounded cursor-pointer">Campaigns</p>

@@ -27,7 +27,7 @@ const Navbar = () => {
   }, []);
 
   const user = {
-    isAuthenticated: true, // Set to false to test unauthenticated state
+    isAuthenticated: false, // Set to false to test unauthenticated state
     profilePic: "https://i.pravatar.cc/40?img=12", // Mock profile picture
   };
 
@@ -60,18 +60,6 @@ const Navbar = () => {
     document.body.style.overflow = productOpen ? "hidden" : "auto";
   }, [productOpen]);
 
-  //   <style>
-  //   {`
-  //    .thinText {
-
-  //       font-weight: 300;
-  //       line-height: 24px;
-  //       color:rgb(196, 26, 26);
-  //     },
-
-  //   `}
-  // </style>
-
   return (
     <>
       <nav className=" custom-w-full  flex items-center justify-between px-10 md:px-8 lg:px-12 xl:px-6 py-4 border-b border-gray-300 bg-white relative z-50">
@@ -89,7 +77,7 @@ const Navbar = () => {
             <div className="relative product-dropdown">
               <button
                 onClick={() => setProductOpen(!productOpen)}
-                className="hover:text-[var(--bs-red)] transition flex items-center gap-1"
+                className=" fontNavbar hover:text-[var(--color-red)]! transition! flex! items-center! gap-1!"
               >
                 Product
                 {productOpen ? (
@@ -100,42 +88,45 @@ const Navbar = () => {
               </button>
             </div>
 
-            <Link className="hover:text-[var(--bs-red)] transition" to="#">
+            <Link
+              className=" fontNavbar hover:text-[var(--color-red)]! transition! flex! items-center! gap-1!"
+              to="#"
+            >
               Customer
             </Link>
 
             <div className="relative group">
-              <Link className="hover:text-[var(--bs-red)] transition">
+              <Link className=" fontNavbar hover:text-[var(--color-red)]! transition! flex! items-center! gap-1!">
                 Company
               </Link>
-              <div className="absolute invisible text-[var(--bs-red)] opacity-0 group-hover:visible group-hover:opacity-100 transition-all duration-200 top-full left-0 mt-2 bg-white shadow-md rounded-md p-4 w-40 z-50">
+              <div className="absolute invisible text-[var(--color-red)] opacity-0 group-hover:visible group-hover:opacity-100 transition-all duration-200 top-full left-0 mt-2 bg-white shadow-md rounded-md p-4 w-40 z-50">
                 <Link
                   to="/blog"
-                  className="block text-sm hover:text-[var(--bs-blue)] mb-2"
+                  className="block text-sm hover:text-[var(--color-blue)] mb-2"
                 >
                   About us
                 </Link>
                 <Link
                   to="/community"
-                  className="block text-sm hover:text-[var(--bs-blue)] mb-2"
+                  className="block text-sm hover:text-[var(--color-blue)] mb-2"
                 >
                   Our Story
                 </Link>
                 <Link
                   to="/support"
-                  className="block text-sm hover:text-[var(--bs-blue)] mb-2"
+                  className="block text-sm hover:text-[var(--color-blue)] mb-2"
                 >
                   Rural revival
                 </Link>
                 <Link
                   to="/contact"
-                  className="block text-sm hover:text-[var(--bs-blue)] mb-2"
+                  className="block text-sm hover:text-[var(--color-blue)] mb-2"
                 >
                   Press
                 </Link>
                 <Link
                   to="/contact"
-                  className="block text-sm hover:text-[var(--bs-blue)] mb-2"
+                  className="block text-sm hover:text-[var(--color-blue)] mb-2"
                 >
                   Events
                 </Link>
@@ -143,7 +134,7 @@ const Navbar = () => {
             </div>
           </div>
 
-          <div className="hidden sm:block relative group ml-2 cursor-pointer hover:text-[var(--bs-red)] transition">
+          <div className="hidden sm:block relative group ml-2 cursor-pointer hover:text-[var(--color-red)] transition">
             <svg
               width="20"
               height="20"
@@ -159,25 +150,25 @@ const Navbar = () => {
             <div className="absolute invisible opacity-0 group-hover:visible group-hover:opacity-100 transition-all duration-200 top-full left-0 mt-2 bg-white shadow-md rounded-md p-4 w-40 z-50">
               <Link
                 to="/blog"
-                className="block text-sm hover:text-[var(--bs-blue)] mb-2"
+                className="block text-sm hover:text-[var(--color-blue)] mb-2"
               >
                 Blog
               </Link>
               <Link
                 to="/community"
-                className="block text-sm hover:text-[var(--bs-blue)] mb-2"
+                className="block text-sm hover:text-[var(--color-blue)] mb-2"
               >
                 Community
               </Link>
               <Link
                 to="/support"
-                className="block text-sm hover:text-[var(--bs-blue)] mb-2"
+                className="block text-sm hover:text-[var(--color-blue)] mb-2"
               >
                 Support
               </Link>
               <Link
                 to="/contact"
-                className="block text-sm hover:text-[var(--bs-blue)]"
+                className="block text-sm hover:text-[var(--color-blue)]"
               >
                 Contact Us
               </Link>
@@ -195,9 +186,9 @@ const Navbar = () => {
                     <input
                       type="text"
                       placeholder="Search..."
-                      className="border border-gray-300 px-4 py-2 rounded-full text-sm text-gray-700 focus:outline-none focus:ring-2 focus:ring-[var(--bs-blue)]"
+                      className="border border-gray-300 px-4 py-2 rounded-full text-sm text-gray-700 focus:outline-none focus:ring-2 focus:ring-[var(--color-blue)]"
                     />
-                    <button className="absolute right-2 top-1/2 transform -translate-y-1/2 text-gray-500 hover:text-[var(--bs-red)]">
+                    <button className="absolute right-2 top-1/2 transform -translate-y-1/2 text-gray-500 hover:text-[var(--color-red)]">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         className="h-5 w-5"
@@ -251,7 +242,7 @@ const Navbar = () => {
                             color: "rgb(20, 19, 19)",
                           }}
                           onClick={() => {
-                            onLogout(); // Call your logout logic here
+                            onLogout();
                             setOpen(false);
                           }}
                         >
@@ -265,13 +256,20 @@ const Navbar = () => {
                 <>
                   <button
                     onClick={handleLogin}
-                    className="cursor-pointer px-8 py-2 transition text-white rounded-full bg-[var(--bs-red)] hover:bg-[var(--bs-blue)]"
+                    style={{
+                      background: "linear-gradient(to top, #ef4444, #ec4899)",
+                    }}
+                    className="cursor-pointer px-8 py-2 transition text-white rounded-full hover:opacity-90"
                   >
                     Login
                   </button>
+
                   <button
                     onClick={handleRegister}
-                    className="cursor-pointer px-8 py-2 bg-[var(--bs-red)] hover:bg-[var(--bs-blue)] transition text-white rounded-full"
+                    className="cursor-pointer px-8 py-2  transition text-white rounded-full"
+                    style={{
+                      background: "linear-gradient(to top, #ef4444, #ec4899)",
+                    }}
                   >
                     Register
                   </button>
@@ -324,14 +322,14 @@ const Navbar = () => {
                 setProductOpen(true);
                 setOpen(false);
               }}
-              className="text-left mt-5 hover:text-[var(--bs-red)]"
+              className="text-left mt-5 hover:text-[var(--color-red)]"
             >
               Product
             </button>
 
             <Link
               to="#"
-              className="hover:text-[var(--bs-red)]"
+              className="hover:text-[var(--color-red)]"
               onClick={() => setOpen(false)}
             >
               Customer
@@ -342,35 +340,35 @@ const Navbar = () => {
               <div className="ml-2 flex flex-col gap-2 text-sm">
                 <Link
                   to="/blog"
-                  className="hover:text-[var(--bs-blue)]"
+                  className="hover:text-[var(--color-blue)]"
                   onClick={() => setOpen(false)}
                 >
                   About us
                 </Link>
                 <Link
                   to="/community"
-                  className="hover:text-[var(--bs-blue)]"
+                  className="hover:text-[var(--color-blue)]"
                   onClick={() => setOpen(false)}
                 >
                   Our Story
                 </Link>
                 <Link
                   to="/support"
-                  className="hover:text-[var(--bs-blue)]"
+                  className="hover:text-[var(--color-blue)]"
                   onClick={() => setOpen(false)}
                 >
                   Rural Revival
                 </Link>
                 <Link
                   to="/contact"
-                  className="hover:text-[var(--bs-blue)]"
+                  className="hover:text-[var(--color-blue)]"
                   onClick={() => setOpen(false)}
                 >
                   Press
                 </Link>
                 <Link
                   to="/contact"
-                  className="hover:text-[var(--bs-blue)]"
+                  className="hover:text-[var(--color-blue)]"
                   onClick={() => setOpen(false)}
                 >
                   Events
@@ -378,7 +376,7 @@ const Navbar = () => {
               </div>
             </div>
 
-            <div className="relative group mt-4 ml-2 cursor-pointer text-sm text-gray-700 hover:text-[var(--bs-red)] transition w-max">
+            <div className="relative group mt-4 ml-2 cursor-pointer text-sm text-gray-700 hover:text-[var(--color-red)] transition w-max">
               <div className="flex items-center gap-2">
                 <svg
                   width="20"
@@ -397,28 +395,28 @@ const Navbar = () => {
               <div className="absolute left-6 top-0 translate-x-full ml-4 invisible opacity-0 group-hover:visible group-hover:opacity-100 transition-all duration-200 bg-white shadow-md rounded-md p-4 w-40 z-50">
                 <Link
                   to="/blog"
-                  className="block text-sm hover:text-[var(--bs-blue)] mb-2"
+                  className="block text-sm hover:text-[var(--color-blue)] mb-2"
                   onClick={() => setOpen(false)}
                 >
                   Blog
                 </Link>
                 <Link
                   to="/community"
-                  className="block text-sm hover:text-[var(--bs-blue)] mb-2"
+                  className="block text-sm hover:text-[var(--color-blue)] mb-2"
                   onClick={() => setOpen(false)}
                 >
                   Community
                 </Link>
                 <Link
                   to="/support"
-                  className="block text-sm hover:text-[var(--bs-blue)] mb-2"
+                  className="block text-sm hover:text-[var(--color-blue)] mb-2"
                   onClick={() => setOpen(false)}
                 >
                   Support
                 </Link>
                 <Link
                   to="/contact"
-                  className="block text-sm hover:text-[var(--bs-blue)]"
+                  className="block text-sm hover:text-[var(--color-blue)]"
                   onClick={() => setOpen(false)}
                 >
                   Contact Us
@@ -451,13 +449,13 @@ const Navbar = () => {
                   <>
                     <button
                       onClick={handleLogin}
-                      className="cursor-pointer px-8 py-2 transition text-white rounded-full bg-[var(--bs-red)] hover:bg-[var(--bs-blue)]"
+                      className="cursor-pointer px-8 py-2 transition text-white rounded-full bg-[var(--color-red)] hover:bg-[var(--color-blue)]"
                     >
                       Login
                     </button>
                     <button
                       onClick={handleRegister}
-                      className="cursor-pointer px-8 py-2 bg-[var(--bs-red)] hover:bg-[var(--bs-blue)] transition text-white rounded-full"
+                      className="cursor-pointer px-8 py-2 bg-[var(--color-red)] hover:bg-[var(--color-blue)] transition text-white rounded-full"
                     >
                       Register
                     </button>

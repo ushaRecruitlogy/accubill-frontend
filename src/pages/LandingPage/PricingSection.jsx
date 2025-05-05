@@ -64,9 +64,9 @@ const PricingSection = () => {
                 {plan.title}
               </p>
 
-              <h1 className="text-3xl mr-25 md:text-4xl text-[var(--bs-red)] font-semibold">
+              <h1 className="text-3xl mr-25 md:text-4xl text-[var(--color-red)] font-semibold">
                 ${plan.price}
-                <span className="text-sm font-normal text-[var(--bs-red)]">/month</span>
+                <span className="text-sm font-normal text-[var(--color-red)]">/month</span>
               </h1>
             </div>
 
@@ -92,10 +92,10 @@ const PricingSection = () => {
           </div>
           <button
             type="button"
-            className={`cursor-pointer justify-center w-fit px-3 py-2 mx-auto transition text-white text-sm rounded-full bg-[var(--bs-red)] hover:bg-[var(--bs-blue)] ${
+            className={`cursor-pointer justify-center w-fit px-3 py-2 mx-auto transition text-white text-sm rounded-full bg-[var(--color-red)] hover:bg-[var(--color-blue)] ${
               plan.highlight
-                ? "bg-red-400 text-white hover:bg-[var(--bs-blue)] "
-                : "bg-red-400 text-white hover:bg-[var(--bs-blue)]"
+                ? "bg-[var(--color-blue)] text-white hover:bg-[var(--color-blue)] "
+                : "bg-[var(--color-blue)] text-white hover:bg-[var(--color-blue)]"
             }`}
           >
             Get Started

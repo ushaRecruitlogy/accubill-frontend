@@ -73,7 +73,7 @@ const Personal = () => {
       </style>
       <div className="relative w-full max-w-5xl rounded-md bg-gray-50 p-8 shadow-md">
         <button
-          className="absolute top-4 right-4 bg-red-500 text-white px-4 py-2 rounded hover:bg-indigo-600"
+          className="absolute top-4 right-4 bg-[var(--color-red)] text-white px-4 py-2 rounded hover:bg-indigo-600"
           onClick={() => {
             setTempProfile(profile); // reset temp data each time
             setShowEditModal(true);
@@ -136,7 +136,7 @@ const Personal = () => {
                 Cancel
               </button>
               <button
-                className="bg-red-500 text-white px-4 py-2 rounded"
+                className="bg-[var(--color-red)] text-white px-4 py-2 rounded"
                 onClick={handleSave}
               >
                 Save
